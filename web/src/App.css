@@ -1,0 +1,177 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+.boot {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.page.narrow {
+  max-width: 440px;
+  padding-top: 64px;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.hero-brand {
+  text-align: center;
+  animation: float-in 0.6s ease;
+}
+
+.hero-brand .logo-mark {
+  display: inline-block;
+  animation: bob 3.2s ease-in-out infinite;
+  filter: drop-shadow(0 8px 12px rgba(28, 25, 23, 0.08));
+}
+
+.hero-brand .brand-title {
+  font-weight: 800 !important;
+  letter-spacing: 0.04em;
+}
+
+.tagline {
+  font-size: 1.15rem;
+  color: var(--muted) !important;
+  margin-bottom: 0 !important;
+  font-weight: 600;
+}
+
+.home-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.action-card {
+  background: rgba(255, 253, 249, 0.72) !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(28, 25, 23, 0.05) !important;
+  border-radius: 26px !important;
+  min-height: 200px;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  overflow: hidden;
+}
+
+.action-card .ant-card-body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 28px 26px 24px !important;
+}
+
+.action-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 253, 249, 0.95) !important;
+  border-color: rgba(14, 165, 233, 0.16) !important;
+  box-shadow: 0 10px 28px rgba(28, 25, 23, 0.05) !important;
+}
+
+.action-card .card-title {
+  margin: 0 0 10px !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem !important;
+  letter-spacing: 0.02em;
+  color: var(--ink) !important;
+}
+
+.action-card .card-desc {
+  flex: 1;
+  display: block;
+  margin: 0 !important;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  font-weight: 500;
+  color: var(--muted) !important;
+}
+
+.action-card .ant-btn {
+  margin-top: 22px;
+  height: 40px;
+  font-weight: 600;
+  border-radius: 999px !important;
+}
+
+.home-footer {
+  flex-direction: column;
+  align-items: center !important;
+  text-align: center;
+}
+
+.home-footer .hint {
+  max-width: 520px;
+  font-size: 12px;
+}
+
+.admin-page .ant-card,
+.lan-page .ant-card,
+.narrow .ant-card {
+  background: var(--card);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(28, 25, 23, 0.06);
+  border-radius: var(--radius) !important;
+}
+
+.ant-btn-primary {
+  box-shadow: none !important;
+}
+
+.ant-float-btn {
+  border: 1px solid rgba(28, 25, 23, 0.08) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+@keyframes float-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 800px) {
+  .home-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .page {
+    padding: 20px 14px 48px;
+  }
+}

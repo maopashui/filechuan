@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+
+:root {
+  --bg0: #fffaf3;
+  --bg1: #fff7eb;
+  --bg2: #fffdf9;
+  --ink: #0f172a;
+  --muted: #64748b;
+  --card: rgba(255, 253, 249, 0.92);
+  --shadow: 0 6px 20px rgba(28, 25, 23, 0.06);
+  --accent: #fb923c;
+  --blush: #fda4af;
+  --mint: #6ee7b7;
+  --radius: 22px;
+}
+
+html[data-theme='dark'] {
+  --bg0: #0b1220;
+  --bg1: #0f172a;
+  --bg2: #111827;
+  --ink: #e2e8f0;
+  --muted: #94a3b8;
+  --card: rgba(17, 24, 39, 0.92);
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --accent: #fb923c;
+  --blush: #fb7185;
+  --mint: #34d399;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: 'Nunito', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, var(--bg0), var(--bg2));
+  background-attachment: fixed;
+}
+
+html[data-theme='dark'] body {
+  background: linear-gradient(180deg, var(--bg0), var(--bg1));
+  background-attachment: fixed;
+}
+
+a {
+  color: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,13 @@
+.env
+data/
+bin/
+dist/
+web/node_modules/
+web/dist/
+webembed/dist/assets/
+*.log
+.DS_Store
+coverage/
+web/coverage/
+*.exe
+*.test
